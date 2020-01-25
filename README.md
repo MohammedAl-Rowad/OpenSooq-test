@@ -4,6 +4,8 @@ This `read me` containes some information about my solution.
 
 ## Information
 
+- I'm using `PHP 7.2.24`
+
 - Steps from `1` to `7` are in [`Hamming.php`, `Levenshtein.php`] files.
 
 - Step `8` is in `step_8.php` file.
