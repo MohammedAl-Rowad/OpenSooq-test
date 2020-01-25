@@ -42,7 +42,7 @@ class Levenshtein
      * Create distance matrix
      * for all possible modifications
      * of substrings of a to substrings of b.
-     *
+     * starting from empty string (why the + 1)
      * @param integer $a_len
      * @param integer $b_len
      * @return array
@@ -51,14 +51,14 @@ class Levenshtein
     {
         return array_map(function () use ($a_len) {
             return array_fill(0, $a_len + 1, null);
-        }, array_fill(0, $b_len, null));
+        }, array_fill(0, $b_len + 1, null));
     }
 
     /**
      *
      * Fill the first row of the matrix.
      * aka => transforming empty string to a.
-     * In this case the number of transformations equals to size of a substring.
+     * This row will help build or result !
      * @param string $a
      * @return void
      */
@@ -72,8 +72,7 @@ class Levenshtein
     /**
      * Fill the first column of the matrix.
      * aka => transforming empty string to b.
-     * In this case the number of transformations equals to size of b substring.
-     *
+     * This column will help build or result !
      * @param string $b
      * @return void
      */
@@ -93,8 +92,11 @@ class Levenshtein
      * 1 - add 1 to it (min + 1).
      * 2 - just min (when the end charts are equal, see line 107 & 111)
      *
-     *
-     * each time and add 1 to it.
+     * ~~~
+     * The main idea behind this function it to add the
+     * edit distance between each substring between the strings,
+     * into the distance matrix, then the optimal (min)
+     * solution will be at the end of the matrix.
      *
      * @param string $a
      * @param string $b
