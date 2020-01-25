@@ -22,7 +22,7 @@ Information on how to run step 9 - 10 are written as comment on the top of the f
 > php [FILE_NAME.php]
 ```
 
-## Running example 9:
+## Running Step 9:
 
 ```bash
 $ git clone https://github.com/MohammedAl-Rowad/OpenSooq-test.git
@@ -36,7 +36,7 @@ $ php command_line_step_9.php
   <img src="step_9_res.png">
 </details>
 
-## Running example 10:
+## Running Step 10:
 
 ```bash
 $ git clone https://github.com/MohammedAl-Rowad/OpenSooq-test.git
