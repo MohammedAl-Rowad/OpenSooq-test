@@ -87,8 +87,12 @@ class Levenshtein
     /**
      * calculating the distance by
      * finding the min value from 3 cells
-     * | val | val |
-     * | val | new |
+     * |   delete     | insert |
+     * | substitution |  _new_ |
+     * and then there is 2 options
+     * 1 - add 1 to it (min + 1).
+     * 2 - just min (when the end charts are equal, see line 107 & 111)
+     *
      *
      * each time and add 1 to it.
      *
