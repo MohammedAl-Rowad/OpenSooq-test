@@ -1,6 +1,6 @@
 <?php
 /**
- * This file contains step 9 run it like this
+ * This file contains step 9, run it like this
  * How to run:
  * 1 - open the terminal/cmd and 'cd' into where you
  * downloaded this file.
